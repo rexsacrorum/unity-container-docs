@@ -1,189 +1,235 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Namespace Unity | Unity Container </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Namespace Unity | Unity Container ">
-    
-    
-      <link rel="shortcut icon" href="../images/favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unity">
+
+        <article data-uid="Unity">
 
   <h1 id="Unity" data-uid="Unity" class="text-break">Namespace Unity</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
+
     <h3 id="classes">
 Classes
 </h3>
-      <h4><a class="xref" href="Unity.DependencyAttribute.html">DependencyAttribute</a></h4>
-      <section><p>This attribute is used to mark properties and parameters as targets for injection.</p>
-</section>
-      <h4><a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a></h4>
-      <section><p>Base class for attributes that can be placed on parameters
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.DependencyAttribute.html">DependencyAttribute</a></dt>
+      <dd><p>This attribute is used to mark properties and parameters as targets for injection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a></dt>
+      <dd><p>Base class for attributes that can be placed on parameters
 or properties to specify how to resolve the value for
 that parameter or property.</p>
-</section>
-      <h4><a class="xref" href="Unity.FactoryLifetime.html">FactoryLifetime</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.Inject.html">Inject</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.InjectionConstructorAttribute.html">InjectionConstructorAttribute</a></h4>
-      <section><p>This attribute is used to indicate which constructor to choose when
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.FactoryLifetime.html">FactoryLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Inject.html">Inject</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InjectionConstructorAttribute.html">InjectionConstructorAttribute</a></dt>
+      <dd><p>This attribute is used to indicate which constructor to choose when
 the container attempts to build a type.</p>
-</section>
-      <h4><a class="xref" href="Unity.InjectionMethodAttribute.html">InjectionMethodAttribute</a></h4>
-      <section><p>This attribute is used to mark methods that should be called when
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InjectionMethodAttribute.html">InjectionMethodAttribute</a></dt>
+      <dd><p>This attribute is used to mark methods that should be called when
 the container is building an object.</p>
-</section>
-      <h4><a class="xref" href="Unity.InstanceLifetime.html">InstanceLifetime</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.Invoke.html">Invoke</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.OptionalDependencyAttribute.html">OptionalDependencyAttribute</a></h4>
-      <section><p>An <a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a> used to mark a dependency
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InstanceLifetime.html">InstanceLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Invoke.html">Invoke</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.OptionalDependencyAttribute.html">OptionalDependencyAttribute</a></dt>
+      <dd><p>An <a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a> used to mark a dependency
 as optional - the container will try to resolve it, and return null
 if the resolution fails rather than throw.</p>
-</section>
-      <h4><a class="xref" href="Unity.Override.html">Override</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.ResolutionFailedException.html">ResolutionFailedException</a></h4>
-      <section><p>The exception thrown by the Unity container when
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Override.html">Override</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.ResolutionFailedException.html">ResolutionFailedException</a></dt>
+      <dd><p>The exception thrown by the Unity container when
 an attempt to resolve a dependency fails.</p>
-</section>
-      <h4><a class="xref" href="Unity.Resolve.html">Resolve</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.TypeLifetime.html">TypeLifetime</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.UnityContainerAsyncExtensions.html">UnityContainerAsyncExtensions</a></h4>
-      <section><p>Extension class that adds a set of convenience overloads to the
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Resolve.html">Resolve</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.TypeLifetime.html">TypeLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.UnityContainerAsyncExtensions.html">UnityContainerAsyncExtensions</a></dt>
+      <dd><p>Extension class that adds a set of convenience overloads to the
 <a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a> interface.</p>
-</section>
-      <h4><a class="xref" href="Unity.UnityContainerExtensions.html">UnityContainerExtensions</a></h4>
-      <section><p>Extension class that adds a set of convenience overloads to the
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.UnityContainerExtensions.html">UnityContainerExtensions</a></dt>
+      <dd><p>Extension class that adds a set of convenience overloads to the
 <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> interface.</p>
-</section>
+</dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
-      <h4><a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a></h4>
-      <section><p>Information about the types registered in a container.</p>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a></dt>
+      <dd><p>Information about the types registered in a container.</p>
 <p>
 Types registered with container are stored in registry and exposed to outside world
 through <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">Registrations</a> enumeration. Each record is 
 represented by an instance of this interface.
 </p>
-</section>
-      <h4><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></h4>
-      <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></dt>
+      <dd><p>Interface defining the behavior of the Unity dependency injection container.</p>
 <p>This interface defines a compact API that allows registration of types, instances, and 
 factories, resolution of new objects or initialization of existing instances, scope manipulations,
 and etc.</p>
-</section>
-      <h4><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></h4>
-      <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
-</section>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></dt>
+      <dd><p>Interface defining the behavior of the Unity dependency injection container.</p>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
-      <h4><a class="xref" href="Unity.ResolutionOption.html">ResolutionOption</a></h4>
-      <section><p>Options indicating how dependency should be resolved</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.ResolutionOption.html">ResolutionOption</a></dt>
+      <dd><p>Options indicating how dependency should be resolved</p>
+</dd>
+    </dl>
 
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
