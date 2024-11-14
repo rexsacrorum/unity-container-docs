@@ -27,4 +27,3 @@ Or you can use the following command to build and serve the documentation locall
 ```bash
 docfx docfx.json --serve
 ```
-s
