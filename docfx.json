@@ -33,7 +33,7 @@
         ],
         "exclude": [
           "obj/**",
-          "unitycontainer.github.io/**"
+          "_site/**"
         ]
       }
     ],
@@ -44,14 +44,14 @@
         ],
         "exclude": [
           "obj/**",
-          "unitycontainer.github.io/**"
+          "_site/**"
         ]
       }
     ],
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
-    "dest": "unitycontainer.github.io",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
