@@ -9,7 +9,8 @@
         }
       ],
       "dest": "api",
-      "properties": { "TargetFramework": "netstandard2.0" }
+      "properties": { "TargetFramework": "netstandard2.0" },
+      "allowCompilationErrors": true
     }
   ],
   "build": {
