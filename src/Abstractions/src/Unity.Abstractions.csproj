@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\package.props" />
+
+  <PropertyGroup>
+    <Version>$(VersionBase)</Version>
+    <FileVersion>$(VersionBase).0</FileVersion>
+    <AssemblyVersion>$(VersionBase).0</AssemblyVersion>
+    <PackageId>Unity.Abstractions</PackageId>
+    <Description>Unity Container Public Abstractions</Description>
+    <Copyright>Copyright © .NET Foundation and Contributors. All Rights Reserved</Copyright>
+    <PackageProjectUrl>https://github.com/unitycontainer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/unitycontainer/abstractions</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/unitycontainer/abstractions/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
+    <PackageTags>Unity Container unitycontainer Microsoft.Practices.Unity IoC</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Authors>Unity Open Source Project</Authors>
+    <Company>Unity Open Source Project</Company>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>package.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>Unity</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks />
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' != '' AND '$(TargetFramework)' != 'netstandard1.0' ">
+    <Compile Remove="Lifetime\Managers\ConcurrentDictionary.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' != '' AND $(TargetFramework.StartsWith('netcoreapp'))">
+    <Compile Remove="Exceptions\ResolutionFailedException.Desktop.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' != '' AND $(TargetFramework.StartsWith('netstandard'))">
+    <Compile Remove="Exceptions\ResolutionFailedException.Desktop.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <Compile Remove="Abstracts\IUnityContainerAsync.cs" />
+    <Compile Remove="Extensions\Container\UnityContainerAsync.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Unity.Abstractions.csproj.DotSettings" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DebugType>Portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+
+  <!-- Sourcelink -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.0'">
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  
+</Project>
