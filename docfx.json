@@ -56,7 +56,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "modern"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
@@ -69,7 +70,8 @@
       "_appTitle" : "Unity Container",
       "_appFooter" : "<span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>",
       "_appLogoPath" : "images/logo.svg",
-      "_appFaviconPath": "images/favicon.png"
+      "_appFaviconPath": "images/favicon.png",
+      "_googleAnalyticsTagId" : "G-K4ZYFFEK0Q"
     }  
   }
 }
