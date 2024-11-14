@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class FactoryLifetime | Unity Container </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class FactoryLifetime | Unity Container ">
+    
+    
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.FactoryLifetime">
+
+
+
+  <h1 id="Unity_FactoryLifetime" data-uid="Unity.FactoryLifetime" class="text-break">Class FactoryLifetime</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">FactoryLifetime</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.html">Unity</a></h6>
+  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h5 id="Unity_FactoryLifetime_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class FactoryLifetime</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_External.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.External%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L169">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_External_" data-uid="Unity.FactoryLifetime.External*"></a>
+  <h4 id="Unity_FactoryLifetime_External" data-uid="Unity.FactoryLifetime.External">External</h4>
+  <div class="markdown level1 summary"><p>This lifetime keeps a weak reference to object it holds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager External { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_External_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When no object is associated with the manager container creates and returns a new object. 
+It gets and holds a weak reference to the created object. As long as the object still exists and 
+has not been garbage collected the container will return the object when requested.</p>
+<p>If the object went out of scope and has been garbage collected the container will 
+create and return a new instance.</p>
+<p>This lifetime manager does not dispose an object when container is disposed</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_Hierarchical.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.Hierarchical%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L54">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_Hierarchical_" data-uid="Unity.FactoryLifetime.Hierarchical*"></a>
+  <h4 id="Unity_FactoryLifetime_Hierarchical" data-uid="Unity.FactoryLifetime.Hierarchical">Hierarchical</h4>
+  <div class="markdown level1 summary"><p>Unity returns a unique value for each child container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager Hierarchical { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_Hierarchical_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The Unity container allows creating hierarchies of child containers. This lifetime 
+creates local singleton for each level of the hierarchy. So, when you resolve a 
+type and this container does not have an instance of that type, the container will 
+create new instance. Next type the type is resolved the same instance will be returned.
+</p>
+<p>
+If a child container is created and requested to resolve the type, the child container 
+will create a new instance and store it for subsequent resolutions. Next time the 
+child container requested to resolve the type, it will return stored instance.
+</p>
+<p>If you have multiple children, each will resolve its own instance.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_PerContainer.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.PerContainer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L34">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_PerContainer_" data-uid="Unity.FactoryLifetime.PerContainer*"></a>
+  <h4 id="Unity_FactoryLifetime_PerContainer" data-uid="Unity.FactoryLifetime.PerContainer">PerContainer</h4>
+  <div class="markdown level1 summary"><p>Unity returns the same instance each time the Resolve(...) method is called or when
+the dependency mechanism injects the instance into other classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager PerContainer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_PerContainer_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Per Container lifetime allows a registration of an existing or resolved object as
+a scoped singleton in the container it was created or registered. In other words this
+instance is unique within the container it war registered with. Child or parent
+containers could have their own instances registered for the same contract.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_PerContainerTransient.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.PerContainerTransient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L155">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_PerContainerTransient_" data-uid="Unity.FactoryLifetime.PerContainerTransient*"></a>
+  <h4 id="Unity_FactoryLifetime_PerContainerTransient" data-uid="Unity.FactoryLifetime.PerContainerTransient">PerContainerTransient</h4>
+  <div class="markdown level1 summary"><p>This lifetime is similar to <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> with exception
+how the container holds references to created objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager PerContainerTransient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ContainerControlledTransientManager.html">ContainerControlledTransientManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_PerContainerTransient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+On each call to the Resolve{T}() method a container will create a new objects.
+If the objects implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>, the container will hold a 
+reference to the interface and will dispose the object when the container goes out of scope.
+</p>
+<p>
+This lifetime is particularly useful in session based designs with child containers 
+associated with the session</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_PerResolve.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.PerResolve%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L115">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_PerResolve_" data-uid="Unity.FactoryLifetime.PerResolve*"></a>
+  <h4 id="Unity_FactoryLifetime_PerResolve" data-uid="Unity.FactoryLifetime.PerResolve">PerResolve</h4>
+  <div class="markdown level1 summary"><p>This lifetime keeps a reference to an instance only for the duration of one resolution call</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager PerResolve { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_PerResolve_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This type of lifetime is useful when you need to pass the same instance of the dependency
+to a different nodes of the resolution graph.</p>
+</div>
+  <h5 id="Unity_FactoryLifetime_PerResolve_examples">Examples</h5>
+  <p>Consider this scenario:</p>
+<pre><code class="lang-csharp">class a {}
+
+class b 
+{
+    b(a arg1)
+    {...}
+}
+
+class c
+{
+    c(a arg1, b arg2)
+    {...}
+}</code></pre><p>
+<p>When you resolve type <code>c</code>, it depends on type <code>b</code> and type <code>a</code>. Type <code>b</code>, in turn,
+also depends on type <code>a</code>, and both types, <code>c</code> and <code>b</code>, require <code>a</code> to be the same instance.</p>
+<p>
+If type `a` is a singleton, the logic is easy. But if you require each instance of
+`c` to have a unique `a`, you could use per resolve lifetime. The instance of `a` 
+will act as a singleton only during that one resolution. Next call to resolve the 
+dependent type will create a new object.
+</p><p>
+In the case of recursion, the singleton behavior is still applies and prevents circular dependency
+</p>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_PerThread.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.PerThread%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L126">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_PerThread_" data-uid="Unity.FactoryLifetime.PerThread*"></a>
+  <h4 id="Unity_FactoryLifetime_PerThread" data-uid="Unity.FactoryLifetime.PerThread">PerThread</h4>
+  <div class="markdown level1 summary"><p>Per thread lifetime means a new instance of the registered <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>
+will be created once per each thread. In other words, if a Resolve{T}() method is
+called on a thread the first time, it will return a new object. Each subsequent
+call to Resolve{T}(), or when the dependency mechanism injects instances of
+the type into other classes on the same thread, the container will return the
+same object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager PerThread { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.PerThreadLifetimeManager.html">PerThreadLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_Scoped.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.Scoped%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L74">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_Scoped_" data-uid="Unity.FactoryLifetime.Scoped*"></a>
+  <h4 id="Unity_FactoryLifetime_Scoped" data-uid="Unity.FactoryLifetime.Scoped">Scoped</h4>
+  <div class="markdown level1 summary"><p>Unity returns a unique value for each scope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager Scoped { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_Scoped_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The Unity container allows creating hierarchies of child containers. This lifetime 
+creates local singleton for each level of the hierarchy. So, when you resolve a 
+type and this container does not have an instance of that type, the container will 
+create new instance. Next type the type is resolved the same instance will be returned.
+</p>
+<p>
+If a child container is created and requested to resolve the type, the child container 
+will create a new instance and store it for subsequent resolutions. Next time the 
+child container requested to resolve the type, it will return stored instance.
+</p>
+<p>If you have multiple children, each will resolve its own instance.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_Singleton.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.Singleton%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L21">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_Singleton_" data-uid="Unity.FactoryLifetime.Singleton*"></a>
+  <h4 id="Unity_FactoryLifetime_Singleton" data-uid="Unity.FactoryLifetime.Singleton">Singleton</h4>
+  <div class="markdown level1 summary"><p>Singleton lifetime creates globally unique singleton. Any Unity container
+tree (parent and all the children) is guaranteed to have only one global
+singleton for the registered type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager Singleton { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_Singleton_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Registering a type with singleton lifetime always places the registration 
+at the root of the container tree and makes it globally available for all 
+the children of that container. It does not matter if registration takes 
+places at the root of child container the destination is always the root node.</p>
+<p>Repeating the registration on any of the child nodes with singleton lifetime 
+will always override the root registration.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime_Transient.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime.Transient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L138">View Source</a>
+  </span>
+  <a id="Unity_FactoryLifetime_Transient_" data-uid="Unity.FactoryLifetime.Transient*"></a>
+  <h4 id="Unity_FactoryLifetime_Transient" data-uid="Unity.FactoryLifetime.Transient">Transient</h4>
+  <div class="markdown level1 summary"><p>This lifetime creates and returns a new instance of the requested type for each call
+to the Resolve(...) method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFactoryLifetimeManager Transient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><p>An instance of a <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_FactoryLifetime_Transient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Transient lifetime is a default lifetime of the Unity container. As the name implies it
+lasts very short period of time, actually, no time at all. In the Unity container terms,
+having transient lifetime is the same as having no lifetime manager at all.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_FactoryLifetime.md&amp;value=---%0Auid%3A%20Unity.FactoryLifetime%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Extensions/Lifetime/FactoryLifetime.cs/#L5" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

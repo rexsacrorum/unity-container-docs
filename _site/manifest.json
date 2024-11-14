@@ -1,0 +1,1908 @@
+{
+  "source_base_path": "/Users/sacrorum/GitHub/unity-container-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.DependencyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.DependencyAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.DependencyResolutionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.DependencyResolutionAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.FactoryLifetime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.FactoryLifetime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.IContainerRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.IContainerRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.IUnityContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.IUnityContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.IUnityContainerAsync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.IUnityContainerAsync.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Inject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Inject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.GenericBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.GenericBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.GenericParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.GenericParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.GenericResolvedArrayParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.GenericResolvedArrayParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionConstructor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionConstructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionMatching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionMatching.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionMember-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionMember-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionMember.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionMethod.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionParameter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionParameter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.InjectionProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.InjectionProperty.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.MemberInfoBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.MemberInfoBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.MethodBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.MethodBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.OptionalGenericParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.OptionalGenericParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.OptionalParameter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.OptionalParameter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.OptionalParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.OptionalParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ParameterBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ParameterBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ParameterValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ParameterValue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ResolvedArrayParameter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ResolvedArrayParameter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ResolvedArrayParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ResolvedArrayParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ResolvedParameter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ResolvedParameter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.ResolvedParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.ResolvedParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Injection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Injection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.InjectionConstructorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.InjectionConstructorAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.InjectionMethodAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.InjectionMethodAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.InstanceLifetime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.InstanceLifetime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Invoke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Invoke.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.ContainerControlledLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.ContainerControlledLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.ContainerControlledTransientManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.ContainerControlledTransientManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.ExternallyControlledLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.ExternallyControlledLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.HierarchicalLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.HierarchicalLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.IFactoryLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.IFactoryLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.IInstanceLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.IInstanceLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.ILifetimeContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.ILifetimeContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.ITypeLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.ITypeLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.LifetimeManager.InvalidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.LifetimeManager.InvalidValue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.LifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.LifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.PerResolveLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.PerResolveLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.PerThreadLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.PerThreadLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.SingletonLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.SingletonLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.SynchronizedLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.SynchronizedLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.TransientLifetimeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.TransientLifetimeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Lifetime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Lifetime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.OptionalDependencyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.OptionalDependencyAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Override.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Override.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Policy.IPolicyList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Policy.IPolicyList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Policy.IPolicySet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Policy.IPolicySet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Policy.PolicySetExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Policy.PolicySetExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Policy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Policy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.DependencyOverride-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.DependencyOverride-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.DependencyOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.DependencyOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.FieldOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.FieldOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.IResolve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.IResolve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.IResolveContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.IResolveContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.IResolveContextExpression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.IResolveContextExpression-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.IResolverFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.IResolverFactory-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.NamedType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.NamedType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.ParameterOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.ParameterOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.ParameterOverrides.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.ParameterOverrides.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.PropertyOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.PropertyOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.ResolveDelegate-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.ResolveDelegate-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.ResolverFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.ResolverFactory-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.ResolverOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.ResolverOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.ResolutionFailedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.ResolutionFailedException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.ResolutionOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.ResolutionOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.TypeLifetime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.TypeLifetime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.UnityContainerAsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.UnityContainerAsyncExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.UnityContainerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.UnityContainerExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/application.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/application.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/changelog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/design.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/design.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/features.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/features.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/history.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/history.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/installation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/quickstart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/resolver-override.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/resolver-override.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/constructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/field.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/field.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/hierarchy.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/hierarchy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/method.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/method.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/property.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/specification.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/specification.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/summary.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/summary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "specs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "specs/toc.html"
+        },
+        ".json": {
+          "relative_path": "specs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "specs/workflow.md",
+      "output": {
+        ".html": {
+          "relative_path": "specs/workflow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/annotation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/annotation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/constructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/field.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/field.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/method.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/method.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/parameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Annotation/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/property.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Annotation/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Annotation/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Annotation/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/BuildUp/buildup.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/BuildUp/buildup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/BuildUp/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/BuildUp/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/BuildUp/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/deferred.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/deferred.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/generics.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/generics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/lazy.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/lazy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/Generics/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/Generics/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/generic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/generic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/implementation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/implementation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/mapping.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/mapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/Mapping/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/Mapping/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/dependency.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/dependency.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/field.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/field.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/override.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/override.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/parameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/property.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/Overrides/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/Overrides/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Resolution/resolution.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Resolution/resolution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/Resolution/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Resolution/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/Resolution/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Resolution/type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Resolution/type.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Selection/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Selection/constructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Selection/selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Selection/selection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/Selection/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Selection/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/Selection/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/collections.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/collections.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/composition.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/composition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Composition/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Composition/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Extensions/activation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/activation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Extensions/compilation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/compilation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Extensions/diagnostic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/diagnostic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Extensions/extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Extensions/legacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/legacy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/Extensions/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Extensions/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/Extensions/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/definitions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/definitions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/hierarchies.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/hierarchies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/container.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/container.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/container_transient.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/container_transient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/disposal.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/disposal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/external.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/external.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/hierarchical.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/hierarchical.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/lifetime.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/lifetime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/managers.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/managers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/resolve.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/resolve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/singleton.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/singleton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/thread.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/thread.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/lifetime/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/lifetime/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/transient.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/transient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/annotation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/annotation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/automatic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/automatic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/constructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_count.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_count.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_none.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_none.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_types.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_values.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_values.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/registration/Type/Constructor/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/registration/Type/Constructor/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Injection/default.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Injection/default.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Injection/injected.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Injection/injected.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Injection/injection.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Injection/injection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Injection/resolved.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Injection/resolved.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/registration/Type/Injection/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Injection/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/registration/Type/Injection/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/field.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/field.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/method.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/method.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/parameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/property.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/registration.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/registration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/registration/Type/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/registration/Type/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/factory.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/factory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/instance.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/instance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/registration.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/registration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/registration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/registration/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

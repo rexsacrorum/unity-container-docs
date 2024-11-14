@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Attributed Injection Model | Unity Container </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Attributed Injection Model | Unity Container ">
+    
+    
+      <link rel="shortcut icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Annotation">
+<h1 id="attributed-injection-model">Attributed Injection Model</h1>
+
+<p>One of the most useful and powerful techniques when using Unity is to take advantage of dependency injection for the parameters of class constructors and methods, and for the values of fields and properties. This approach allows you to resolve and populate the entire hierarchy of objects used in your application based on type registrations and mappings defined in the container, with the subsequent advantages this offers.</p>
+<p>You can specify constructor, field, property, and method call injection information in configuration or by adding registrations to the container at run time. You can also apply attributes to members of your classes to indicate injection targets. When you resolve these classes through the container, Unity will generate instances of the dependent objects and wire up the injection targets with these instances.</p>
+<h2 id="using-injection-attributes">Using Injection Attributes</h2>
+<p>Normally, Unity performs selection of the constructor automatically by choosing the most complex constructor it can satisfy with dependencies and populating these parameters with resolved values when it constructs the object. In some cases, for various reasons, the constructor could not be selected successfully and container may throw an exception.</p>
+<h3 id="constructor-annotation">Constructor Annotation</h3>
+<p>To disambiguate selection or to override automatic behavior you could specify which constructor Unity should use to construct the object by marking it with <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute.</p>
+<h3 id="member-annotation">Member Annotation</h3>
+<p>Property, field, and method call injections do not occur automatically unless registered with appropriate injection members at run time. To enable automatic member injection for types you can add attributes to the members of your classes to force injection of dependent objects when the target class is resolved.</p>
+<h4 id="required-and-optional">Required and Optional</h4>
+<p>Fields, Properties, and Parameters could be annotated with either <a class="xref" href="../../api/Unity.DependencyAttribute.html">Dependency</a> or <a class="xref" href="../../api/Unity.OptionalDependencyAttribute.html">OptionalDependency</a> attributes to indicate that these require values to be injected. For annotating methods you wish to be called during initialization you could use <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a></p>
+<p>For more information, see:</p>
+<ul>
+<li><a class="xref" href="constructor.html">Annotating types for <strong>Constructor</strong> invocation</a></li>
+<li><a class="xref" href="method.html">Annotating types for <strong>Method</strong> invocation</a></li>
+<li><a class="xref" href="parameter.html">Annotating <strong>Parameter</strong> for injection</a></li>
+<li><a class="xref" href="field.html">Annotating types for <strong>Field</strong> injection</a></li>
+<li><a class="xref" href="property.html">Annotating types for <strong>Property</strong> injection</a></li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/Annotation/annotation.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

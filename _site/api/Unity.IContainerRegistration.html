@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IContainerRegistration | Unity Container </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IContainerRegistration | Unity Container ">
+    
+    <meta name="description" content="Information about the types registered in a container.  Types registered with container are stored in registry and exposed to outside world through  enumeration. Each record is  represented by an instance of this interface.">
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.IContainerRegistration">
+
+
+
+  <h1 id="Unity_IContainerRegistration" data-uid="Unity.IContainerRegistration" class="text-break">Interface IContainerRegistration</h1>
+  <div class="markdown level0 summary"><p>Information about the types registered in a container.</p>
+<p>
+Types registered with container are stored in registry and exposed to outside world
+through <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">Registrations</a> enumeration. Each record is 
+represented by an instance of this interface.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.html">Unity</a></h6>
+  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h5 id="Unity_IContainerRegistration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IContainerRegistration</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_IContainerRegistration_LifetimeManager.md&amp;value=---%0Auid%3A%20Unity.IContainerRegistration.LifetimeManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Abstracts/IContainerRegistration.cs/#L61">View Source</a>
+  </span>
+  <a id="Unity_IContainerRegistration_LifetimeManager_" data-uid="Unity.IContainerRegistration.LifetimeManager*"></a>
+  <h4 id="Unity_IContainerRegistration_LifetimeManager" data-uid="Unity.IContainerRegistration.LifetimeManager">LifetimeManager</h4>
+  <div class="markdown level1 summary"><p>The lifetime manager for this registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">LifetimeManager LifetimeManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
+        <td><p>Instance of lifetime manager associated with the registration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_IContainerRegistration_LifetimeManager_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Each Unity registration is assigned a lifetime manager that controls how 
+the container creates, manages, and disposes of created objects. Even if 
+manager is not assigned explicitly, Unity will pick default type
+and add it to the registration.
+</p>
+</div>
+  <h5 id="Unity_IContainerRegistration_LifetimeManager_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Unity.html">Unity</a>.<a class="xref" href="Unity.Lifetime.html">Lifetime</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_IContainerRegistration_MappedToType.md&amp;value=---%0Auid%3A%20Unity.IContainerRegistration.MappedToType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Abstracts/IContainerRegistration.cs/#L46">View Source</a>
+  </span>
+  <a id="Unity_IContainerRegistration_MappedToType_" data-uid="Unity.IContainerRegistration.MappedToType*"></a>
+  <h4 id="Unity_IContainerRegistration_MappedToType" data-uid="Unity.IContainerRegistration.MappedToType">MappedToType</h4>
+  <div class="markdown level1 summary"><p>The type that this registration is mapped to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type MappedToType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>The type of object created when registered type is requested</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_IContainerRegistration_MappedToType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Type <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_MappedToType">MappedToType</a> informs container how to build the requested instance. Based on how it was registered, the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> could be built from this registration or redirected to mapped registration to satisfy the request.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_IContainerRegistration_Name.md&amp;value=---%0Auid%3A%20Unity.IContainerRegistration.Name%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Abstracts/IContainerRegistration.cs/#L36">View Source</a>
+  </span>
+  <a id="Unity_IContainerRegistration_Name_" data-uid="Unity.IContainerRegistration.Name*"></a>
+  <h4 id="Unity_IContainerRegistration_Name" data-uid="Unity.IContainerRegistration.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name the registered type. Null for default registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Name of the registration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_IContainerRegistration_Name_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each registration is uniquely identified by <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_RegisteredType">RegisteredType</a> and <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_Name">Name</a>.
+Registering the same <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> with different names will create distinct registrations
+for each <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_RegisteredType">RegisteredType</a> and <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_Name">Name</a> combinations. Registration with no <a class="xref" href="Unity.IContainerRegistration.html#Unity_IContainerRegistration_Name">Name</a>
+(<code>name == null</code>) is called <code>default registration</code>. The container uses these as implicit defaults when required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_IContainerRegistration_RegisteredType.md&amp;value=---%0Auid%3A%20Unity.IContainerRegistration.RegisteredType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Abstracts/IContainerRegistration.cs/#L24">View Source</a>
+  </span>
+  <a id="Unity_IContainerRegistration_RegisteredType_" data-uid="Unity.IContainerRegistration.RegisteredType*"></a>
+  <h4 id="Unity_IContainerRegistration_RegisteredType" data-uid="Unity.IContainerRegistration.RegisteredType">RegisteredType</h4>
+  <div class="markdown level1 summary"><p>Type of the registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type RegisteredType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>The type registered with the container</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_IContainerRegistration_RegisteredType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> is what container stores in its internal registry. When resolving, it will look
+for this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to satisfy dependencies.</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(object, Type)</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/new/github-pages/apiSpec/new?filename=Unity_IContainerRegistration.md&amp;value=---%0Auid%3A%20Unity.IContainerRegistration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/src/Abstractions/src/Abstracts/IContainerRegistration.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

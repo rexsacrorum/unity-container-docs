@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Select Constructor By Attribute Annotation | Unity Container </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Select Constructor By Attribute Annotation | Unity Container ">
+    
+    
+      <link rel="shortcut icon" href="../../../../images/favicon.png">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Injection.Constructor.Annotation">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<p>To select constructors you create through the Unity container, you can use the following three techniques:</p>
+<ul>
+<li><p><a class="xref" href="../../../Composition/Selection/constructor.html">Automatic Constructor Injection</a>. With this technique, you allow the Unity container to select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor automatically. For more information see <a class="xref" href="../../../Composition/Selection/constructor.html">Automatic Constructor Selection</a>.</p>
+</li>
+<li><p><a class="xref" href="constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor Member</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="constructor.html">Constructor Injection</a></p>
+</li>
+<li><p><strong>Annotated Constructor Injection</strong>. With this technique, you apply <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to one of the class constructors to designate it to be used to instantiate an instance.</p>
+</li>
+</ul>
+<h2 id="annotated-constructor-injection">Annotated Constructor Injection</h2>
+<p>Constructor Injection with Attribute Annotation allows you to apply attributes to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten in Registration) use that constructor. You only need to use this technique when there is more than one constructor in the target type.</p>
+<h3 id="annotating-a-constructor">Annotating a Constructor</h3>
+<p>When a target class contains more than one constructor and the automatic algorithm does not provide desired selection, you may use the <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to specify the constructor you wish to use for injection.</p>
+<p>Consider the following <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>:</p>
+<pre><code class="lang-csharp" name="class Service">public class Service 
+{
+    public Service() =&gt; Ctor = 1;
+
+    [InjectionConstructor]
+    public Service(object arg) =&gt; Ctor = 2;
+
+    public Service(IUnityContainer container) =&gt; Ctor = 3;
+
+    public Service(object[] data) =&gt; Ctor = 4;
+
+    public int Ctor { get; }    // Constructor called 
+}
+</code></pre>
+<p>In this example type <code>Service</code> contains four public constructors. Three of these constructors have one parameter each. A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> like this creates an ambiguity that Unity could not resolve by itself.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>During resolution, the container will pick the first constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.</p>
+</div>
+<p>The container is not trying to validate all available contractors during normal execution.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructors.</p>
+</div>
+<p>Normally, Unity would select the third constructor with three parameters, but by annotating the second constructor with the attribute you force Unity to use it during resolution.</p>
+<h3 id="multiple-constructor-annotations">Multiple Constructor Annotations</h3>
+<p>Annotating multiple constructors with injection parameters is not recommended. Unity is not guaranteed to process constructors in certain order. If multiple constructors are annotated, behavior might change from version to version.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.</p>
+</div>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
+<li><a class="xref" href="param_count.html">Select constructors by parameters count</a></li>
+<li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/registration/Type/Constructor/annotation.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
