@@ -77,18 +77,14 @@
 
 <p><a href="https://ci.appveyor.com/project/unitycontainer/documentation"><img src="https://ci.appveyor.com/api/projects/status/50hjsoi3gqu1becr?svg=true" alt="Build status"></a></p>
 <h1 id="unity-documentation">Unity Documentation</h1>
-<p>This repository hosts source files and instructions for building Unity documentation site: <a href="https://unitycontainer.github.io">https://unitycontainer.github.io</a></p>
-<p>If you'd like to contribute documentation or report an issue please do it in <a href="https://github.com/unitycontainer/documentation">this repository</a>.</p>
+<p>This repository hosts source files and instructions for building Unity documentation site: <a href="https://sacrorum.com/unity-container-docs/">https://sacrorum.com/unity-container-docs/</a></p>
 <h2 id="building-the-documentation">Building the documentation</h2>
-<p>The documentation is built using <a href="https://dotnet.github.io/docfx/">DocFX</a>. To build the documentation, you need to install DocFX. You can do this by running the following command:</p>
-<pre><code class="lang-bash">dotnet tool install -g docfx
-</code></pre>
-<p>After installing DocFX, you can build the documentation by running the following command:</p>
-<pre><code class="lang-bash">docfx docfx.json
+<p>The documentation is built using <a href="https://dotnet.github.io/docfx/">DocFX</a>. You can build the documentation by running the following command::</p>
+<pre><code class="lang-bash">dotnet docfx docfx.json
 </code></pre>
 <p>The generated documentation will be in the <code>_site</code> directory.</p>
 <p>Or you can use the following command to build and serve the documentation locally:</p>
-<pre><code class="lang-bash">docfx docfx.json --serve
+<pre><code class="lang-bash">dotnet docfx docfx.json --serve
 </code></pre>
 
 </article>
