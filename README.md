@@ -2,6 +2,20 @@
 
 # Unity Documentation
 
-This repository hosts source files and instructions for building Unity documentation site: https://unitycontainer.github.io 
+This repository hosts source files and instructions for building Unity documentation site: https://sacrorum.com/unity-container-docs/ 
 
-If you'd like to contribute documentation or report an issue please do it in [this repository](https://github.com/unitycontainer/documentation).
+## Building the documentation
+
+The documentation is built using [DocFX](https://dotnet.github.io/docfx/). You can build the documentation by running the following command::
+
+```bash
+dotnet docfx docfx.json
+```
+
+The generated documentation will be in the `_site` directory.
+
+Or you can use the following command to build and serve the documentation locally:
+
+```bash
+dotnet docfx docfx.json --serve
+```

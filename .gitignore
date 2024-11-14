@@ -9,7 +9,9 @@
 /**/.vs/
 /api/*.yml
 .manifest
-/unitycontainer.github.io
 /node_modules
 /package-lock.json
 /yarn.lock
+
+# JetBrains Rider
+.idea/

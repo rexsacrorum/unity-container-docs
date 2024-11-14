@@ -22,7 +22,7 @@ function reload(done){
 function serve(done){
   server.init({
     server: {
-      baseDir: './unitycontainer.github.io'
+      baseDir: './_site'
     }
   })
 }

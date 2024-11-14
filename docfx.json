@@ -9,7 +9,8 @@
         }
       ],
       "dest": "api",
-      "properties": { "TargetFramework": "netstandard2.0" }
+      "properties": { "TargetFramework": "netstandard2.0" },
+      "allowCompilationErrors": true
     }
   ],
   "build": {
@@ -33,7 +34,7 @@
         ],
         "exclude": [
           "obj/**",
-          "unitycontainer.github.io/**"
+          "_site/**"
         ]
       }
     ],
@@ -44,18 +45,19 @@
         ],
         "exclude": [
           "obj/**",
-          "unitycontainer.github.io/**"
+          "_site/**"
         ]
       }
     ],
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
-    "dest": "unitycontainer.github.io",
+    "output": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "modern"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
@@ -66,9 +68,10 @@
     "globalMetadata" :
     {
       "_appTitle" : "Unity Container",
-      "_appFooter" : "<span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>",
+      "_appFooter" : "<span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>",
       "_appLogoPath" : "images/logo.svg",
-      "_appFaviconPath": "images/favicon.png"
+      "_appFaviconPath": "images/favicon.png",
+      "_googleAnalyticsTagId" : "G-K4ZYFFEK0Q"
     }  
   }
 }

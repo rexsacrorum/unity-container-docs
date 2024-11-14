@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Automatic Constructor Injection | Unity Container </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Automatic Constructor Injection | Unity Container ">
+      
+      
+      <link rel="icon" href="../../../../images/favicon.png">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/registration/Type/Constructor/automatic.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Tutorial.Injection.Constructor.Implicit">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<p>Proper selection of the constructor used for type instantiation is one of the most important aspects of the container operation. When creating an object, the container uses one of the following algorithms to select a constructor it will be using to initialize the object:</p>
+<ul>
+<li><p><a class="xref" href="constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="constructor.html">Constructor Injection</a></p>
+</li>
+<li><p><a class="xref" href="../../../Annotation/constructor.html">Constructor Annotation</a>. With this technique, you apply attribute to a class constructor that is used for injection. For more information see <a class="xref" href="../../../Annotation/constructor.html">Annotating Type for Constructor Injection</a></p>
+</li>
+<li><p><strong>Automatic Constructor Selection</strong>. This technique is used by the Unity container to select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor if no <a class="xref" href="../../../Annotation/annotation.html">Annotation</a> or <a class="xref" href="../../registration.html">Registration</a> exists.</p>
+</li>
+</ul>
+<h2 id="automatic-constructor-selection">Automatic Constructor Selection</h2>
+<p>Automatic constructor selection is performed if no other information is available on how to create a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>. Unity uses dynamic, real time algorithm to discover and select a constructor.</p>
+<p>The Unity container will try to execute the most complex constructor it can provide with appropriate dependencies. In other words, if the container can resolve and/or inject all parameters of the constructor, it will be selected.</p>
+<h3 id="creating-build-pipeline">Creating Build Pipeline</h3>
+<p>Selection process takes place during the first resolution of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> contract. Unity container employs lazy resolution strategy. It will defer pipeline creation until the contract (<a class="xref" href="../../metadata.html">RegistrationType and Name</a>) is requested.</p>
+<p>The lazy approach allows registrations to proceed at random order and do not require dependencies to be registered before dependents. As long as all of these are available at the time of resolution Unity does not care in what order they were registered.</p>
+<h3 id="constructor-selection-steps">Constructor Selection Steps</h3>
+<p>One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:</p>
+<ul>
+<li>If present, use registered <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a></li>
+<li>If present, annotated with an attribute</li>
+<li>Automatically select constructor
+<ul>
+<li>Get all accessible constructors</li>
+<li>Process constructors in ascending order from most complex to the default
+<ul>
+<li>Filter out <a class="xref" href="constructor.html#restrictions">restricted</a> constructors</li>
+<li>Loop through parameters and check if
+<ul>
+<li>Is primitive
+<ul>
+<li>Is registered with the container</li>
+<li>Has <em>default</em> value</li>
+</ul>
+</li>
+<li>Is resolvable type</li>
+<li>Is registered with container</li>
+</ul>
+</li>
+<li>Select the first constructor the container can create</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The Unity container will select the first successful match and use it as a selection.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.</p>
+</div>
+<p>During normal operation the container does not perform validation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.</p>
+</div>
+<p>If no constructor could be selected, the container will throw an exception.</p>
+<h3 id="pipeline-retention">Pipeline retention</h3>
+<p>Once the pipeline is created, it will be used to satisfy all subsequent requests for that contract. If you need to update or rebuild the pipeline, the contract has to be re-registered.</p>
+
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a class="xref" href="annotation.html">Constructor Annotation</a></li>
+<li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
+<li><a class="xref" href="param_count.html">Select constructors by parameters count</a></li>
+<li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/registration/Type/Constructor/automatic.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

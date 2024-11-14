@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Annotating Type for Constructor Injection | Unity Container </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Annotating Type for Constructor Injection | Unity Container ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/Annotation/constructor.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Tutorial.Annotation.Constructor">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<p>To select constructors you create through the Unity container, you can use the following three techniques:</p>
+<ul>
+<li><p><a class="xref" href="../Composition/Selection/constructor.html">Automatic Constructor Injection</a>. With this technique, you allow the Unity container to select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor automatically. For more information see <a class="xref" href="../Composition/Selection/constructor.html">Automatic Constructor Selection</a>.</p>
+</li>
+<li><p><a class="xref" href="../registration/Type/Constructor/constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor Member</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="../registration/Type/Constructor/constructor.html">Constructor Injection</a></p>
+</li>
+<li><p><strong>Annotated Constructor Injection</strong>. With this technique, you apply <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to one of the class constructors to designate it to be used to instantiate an instance.</p>
+</li>
+</ul>
+<h2 id="annotated-constructor-injection">Annotated Constructor Injection</h2>
+<p>Constructor Injection with Attribute Annotation allows you to apply attributes to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten in Registration) use that constructor. You only need to use this technique when there is more than one constructor in the target type.</p>
+<h3 id="annotating-a-constructor">Annotating a Constructor</h3>
+<p>When a target class contains more than one constructor and the automatic algorithm does not provide desired selection, you may use the <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to specify the constructor you wish to use for injection.</p>
+<p>Consider the following <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>:</p>
+<pre><code class="lang-csharp" name="class Service">public class Service 
+{
+    public Service() =&gt; Ctor = 1;
+
+    [InjectionConstructor]
+    public Service(object arg) =&gt; Ctor = 2;
+
+    public Service(IUnityContainer container) =&gt; Ctor = 3;
+
+    public Service(object[] data) =&gt; Ctor = 4;
+
+    public int Ctor { get; }    // Constructor called 
+}
+</code></pre>
+<p>In this example type <code>Service</code> contains four public constructors. Three of these constructors have one parameter each. A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> like this creates an ambiguity that Unity could not resolve by itself.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>During resolution, the container will pick the first constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.</p>
+</div>
+<p>The container is not trying to validate all available contractors during normal execution.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructors.</p>
+</div>
+<p>Normally, Unity would select the third constructor with three parameters, but by annotating the second constructor with the attribute you force Unity to use it during resolution.</p>
+<h3 id="multiple-constructor-annotations">Multiple Constructor Annotations</h3>
+<p>Annotating multiple constructors with injection parameters is not recommended. Unity is not guaranteed to process constructors in certain order. If multiple constructors are annotated, behavior might change from version to version.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/Annotation/constructor.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

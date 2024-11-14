@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Select Constructor By Number of Parameters | Unity Container </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Select Constructor By Number of Parameters | Unity Container ">
+      
+      
+      <link rel="icon" href="../../../../images/favicon.png">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/registration/Type/Constructor/param_count.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Tutorial.Injection.Constructor.Count">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<h2 id="by-number-of-parameters">By Number of Parameters</h2>
+<p>Selecting constructor by number of parameters is the simplest form of selection. You could use this selection method if the constructor you invoking has unique number of parameters.</p>
+<h3 id="type-of-parameter-as-contract-type">Type of Parameter as Contract Type</h3>
+<p>This method is useful when you are working on a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that takes certain number of parameters but you don't care what these parameter types are.</p>
+<h4 id="parameters">Parameters</h4>
+<p>In a case like this you could use <code>Resolve.Parameter()</code> to specify that you want a parameter at this position to be resolved. For example, consider the following <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>:</p>
+<pre><code class="lang-csharp" name="class Service">public class SampleType
+{
+    public SampleType(object arg) =&gt; Ctor = 1;
+
+    public SampleType(IService service, object arg) =&gt; Ctor = 2;
+
+    public SampleType(IService service, object arg, Type type) =&gt; Ctor = 3;
+
+    public int Ctor { get; } // Constructor called 
+}
+</code></pre>
+<p>It has several constructors with different number of parameters each. Normally, the container would try to run the most complex constructor, but if you want to invoke the one with just a single parameter you need to register it like this:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType&lt;SampleType&gt;( Invoke.Constructor( Resolve.Parameter() ));
+
+</code></pre>
+<p>In this registration you configure the container to invoke a constructor that takes just one parameter. The parameter is resolved using a contract with a type of the parameter and no name.</p>
+<p>Now if you resolve the type, the container will invoke that constructor and inject the parameter:</p>
+<pre><code class="lang-csharp" name="class Service">
+var instance = Container.Resolve&lt;SampleType&gt;();
+
+// 1 == instance.Ctor
+
+</code></pre><h4 id="generic-parameters">Generic Parameters</h4>
+<p>The same method as above, could be used to invoke constructors with generic parameters. Consider the following class:</p>
+<pre><code class="lang-csharp" name="class Service">public class SampleType&lt;T&gt;
+{
+    public SampleType(T arg)
+    {
+        Ctor = 1;
+        Value = arg;
+    }
+
+    public SampleType([Dependency(&quot;one&quot;)]IService service, T arg)
+    {
+        Ctor = 2;
+        Service = service;
+        Value = arg;
+    }
+
+    public SampleType(IService service, T arg, object obj)
+    {
+        Ctor = 3;
+        Service = service;
+        Value = arg;
+    }
+
+    public int Ctor { get; }        // Called Constructor
+    public IService Service { get; }// Service passed in
+    public T Value { get; }         // Generic argument value
+}
+</code></pre>
+<p>To configure the container to invoke the first constructor you would execute the same code with exception of how you pass in a type of the contract. Registration of an open generic requires a conventional method call:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType(typeof(SampleType&lt;&gt;), Invoke.Constructor( Resolve.Parameter() ));
+
+</code></pre>
+<p>When resolved, the container will invoke the first constructor and inject it with created instance of <code>Object</code>:</p>
+<pre><code class="lang-csharp" name="class Service">
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 1 == instance.Ctor
+
+</code></pre><h4 id="parameter-dependencies-with-contract-name">Parameter dependencies with Contract Name</h4>
+<p>When configuring constructors with the method described above you should be mindful of parameter annotations and contract names these annotations might provide.</p>
+<p>When implicitly injecting a parameter, the container will recognize all metadata the parameter is annotated with and will properly inject it with correct contract. When you add an <a class="xref" href="../../../../api/Unity.Injection.ResolvedParameter.html">InjectionMember</a> to configure the parameter you override all these annotations.</p>
+<p>If you look at the second constructor of <code>SampleType&lt;T&gt;</code> you will notice that the first parameter is marked with <a class="xref" href="../../../../api/Unity.DependencyAttribute.html">Dependency</a> attribute. Normally, when resolving that parameter, Unity will, if present, use Name of the Contract the attribute provides. But when you register it as in the following example, you will override that contract:</p>
+<pre><code class="lang-csharp" name="class Service">Container.RegisterType&lt;IService, Service&gt;()
+         .RegisterType&lt;IService, ServiceOne&gt;(&quot;one&quot;)
+         .RegisterType&lt;IService, ServiceTwo&gt;(&quot;two&quot;);
+
+Container.RegisterType(typeof(SampleType&lt;&gt;),
+    Invoke.Constructor(
+        Resolve.Parameter(),
+        Resolve.Parameter()));
+
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 2 == instance.Ctor
+// typeof(Service) == instance.Service.GetType()
+
+</code></pre>
+<p>When resolved, Unity will execute the constructor but instead of dependency with contract name <code>one</code> it will use contract with no name.</p>
+<p>If you need to, you could override contract name explicitly as in the following example:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType(typeof(SampleType&lt;&gt;),
+    Invoke.Constructor(
+        Resolve.Parameter(&quot;two&quot;),
+        Resolve.Parameter()));
+
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 2 == instance.Ctor
+// typeof(ServiceTwo) == instance.Service.GetType()
+
+</code></pre>
+<p>If you'd like to preserve contracts from annotations, you need to use one of the following selection methods instead.</p>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="annotation.html">Constructor Annotation</a></li>
+<li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
+<li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/tutorials/registration/Type/Constructor/param_count.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Unity | Unity Container </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Unity | Unity Container ">
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Unity">
+
+  <h1 id="Unity" data-uid="Unity" class="text-break">Namespace Unity</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.DependencyAttribute.html">DependencyAttribute</a></dt>
+      <dd><p>This attribute is used to mark properties and parameters as targets for injection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a></dt>
+      <dd><p>Base class for attributes that can be placed on parameters
+or properties to specify how to resolve the value for
+that parameter or property.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.FactoryLifetime.html">FactoryLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Inject.html">Inject</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InjectionConstructorAttribute.html">InjectionConstructorAttribute</a></dt>
+      <dd><p>This attribute is used to indicate which constructor to choose when
+the container attempts to build a type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InjectionMethodAttribute.html">InjectionMethodAttribute</a></dt>
+      <dd><p>This attribute is used to mark methods that should be called when
+the container is building an object.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.InstanceLifetime.html">InstanceLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Invoke.html">Invoke</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.OptionalDependencyAttribute.html">OptionalDependencyAttribute</a></dt>
+      <dd><p>An <a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a> used to mark a dependency
+as optional - the container will try to resolve it, and return null
+if the resolution fails rather than throw.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Override.html">Override</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.ResolutionFailedException.html">ResolutionFailedException</a></dt>
+      <dd><p>The exception thrown by the Unity container when
+an attempt to resolve a dependency fails.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.Resolve.html">Resolve</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.TypeLifetime.html">TypeLifetime</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.UnityContainerAsyncExtensions.html">UnityContainerAsyncExtensions</a></dt>
+      <dd><p>Extension class that adds a set of convenience overloads to the
+<a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.UnityContainerExtensions.html">UnityContainerExtensions</a></dt>
+      <dd><p>Extension class that adds a set of convenience overloads to the
+<a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> interface.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a></dt>
+      <dd><p>Information about the types registered in a container.</p>
+<p>
+Types registered with container are stored in registry and exposed to outside world
+through <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">Registrations</a> enumeration. Each record is 
+represented by an instance of this interface.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></dt>
+      <dd><p>Interface defining the behavior of the Unity dependency injection container.</p>
+<p>This interface defines a compact API that allows registration of types, instances, and 
+factories, resolution of new objects or initialization of existing instances, scope manipulations,
+and etc.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></dt>
+      <dd><p>Interface defining the behavior of the Unity dependency injection container.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Unity.ResolutionOption.html">ResolutionOption</a></dt>
+      <dd><p>Options indicating how dependency should be resolved</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

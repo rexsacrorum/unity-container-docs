@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Unity Container Introduction | Unity Container </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Unity Container Introduction | Unity Container ">
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/articles/introduction.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K4ZYFFEK0Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-K4ZYFFEK0Q');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Article.Unity.Introduction">
+<h1 id="unity-container-introduction">Unity Container Introduction</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Unity Container is a full featured, general-purpose <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC container</a> for use in any type of .NET application. It is <a href="https://en.wikipedia.org/wiki/Open_source">Open Source</a> and released under <a href="https://github.com/unitycontainer/unity/blob/master/LICENSE">Apache 2.0 license</a>.</p>
+<p>Unity is extensible. Anyone can write an extensions that changes the behavior of the container, or adds new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.</p>
+<h2 id="what-does-unity-do">What Does Unity Do</h2>
+<p>Apart from decoupling types, components, services, and separating concerns, Unity crates and manages objects. Think of it as operator <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-operator">new ...</a> on steroids.</p>
+<ul>
+<li><a href="#the-types-of-objects-unity-can-create">The Types of Objects Unity Can Create</a></li>
+<li><a href="#registering-types-and-object-instances">Registering Existing Types and Object Instances</a></li>
+<li><a href="#managing-the-lifetime-of-objects">Managing the Lifetime of Objects</a></li>
+<li><a href="#specifying-values-for-injection">Specifying Values for Injection</a></li>
+<li><a href="#populating-collections">Populating collections</a></li>
+<li><a href="#support-for-deferred-resolution">Support for deferred resolution</a></li>
+</ul>
+<h2 id="the-types-of-objects-unity-can-create">The Types of Objects Unity Can Create</h2>
+<p>You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). During object instantiation Unity can:</p>
+<ul>
+<li>Select appropriate constructor</li>
+<li>Inject constructor with parameters</li>
+<li>Inject public properties with values</li>
+<li>Inject public fields with values</li>
+<li>Call any public method on the created object</li>
+</ul>
+<h3 id="registering-types-and-object-instances">Registering Types and Object Instances</h3>
+<p>Unity can resolve any concrete, constructable reference type without registration. For example calling <code>container.Resolve&lt;object&gt;()</code> will produce an instance immediately.</p>
+<p>Registrations allow mapping between service types and implementation types. Create a blueprint of how instances instantiated, initialized, and managed. For generic types it creates internal mini factories that used to generate concrete types. Unity supports three ways of registering types:</p>
+<h4 id="instance-registration">Instance registration</h4>
+<p>Unity exposes a method named <a class="xref" href="../api/Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_">RegisterInstance</a> that you can use to register existing instances with the container. The instance could be registered as concrete type, a type of the instance you would get by calling <code>instance.GetType()</code>, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container it is registered with or externally, in which case Unity just keeps weak reference to the object.</p>
+<h4 id="factory-registration">Factory registration</h4>
+<p>Method <a class="xref" href="../api/Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">RegisterFactory</a> provides a way to register a factory delegate Unity would call when required to provide the type.</p>
+<h4 id="type-registration">Type registration</h4>
+<p><a class="xref" href="../api/Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">RegisterType</a> is a method where you can instruct Unity how to create and initialize objects from scratch. You can specify:</p>
+<ul>
+<li>Constructor to call</li>
+<li>Parameters to pass to the constructor or how to resolve them</li>
+<li>Properties to initialize and how to do it</li>
+<li>Fields to inject and with what</li>
+<li>Methods to call on the created object and parameters to pass to these methods</li>
+<li>Specify how lifetime should be managed</li>
+</ul>
+<h2 id="managing-the-lifetime-of-objects">Managing the Lifetime of Objects</h2>
+<p>Unity allows you to choose the lifetime of the objects it creates. By default, Unity creates a new instance of a type each time you resolve that type. However, you can use different lifetime managers to specify a required lifetime for resolved instances. For example, you can specify that Unity should maintain only a single instance (a singleton). It will create a new instance only if there is no existing instance. If there is an existing instance, it will return a reference to this instead. There are also other lifetime managers you can use.</p>
+<h2 id="specifying-values-for-injection">Specifying Values for Injection</h2>
+<p>Unity allows configurations where dependencies are resolved from the container. But it also provides an easy way to configure injection of values at registration. In other words you could provide values for dependencies to be registered and used during subsequent resolutions.</p>
+<p>Unity also allows overriding of any dependency values during resolution. It could override any configured or resolved value during resolution of the type.</p>
+<h2 id="populating-collections">Populating collections</h2>
+<p>Unity has built-in support for resolving arrays and enumerations of types. For example it would recognize following types as collections and resolve them using proper algorithm:</p>
+<ul>
+<li><code>Resolve&lt;T[]&gt;()</code></li>
+<li><code>Resolve&lt;IEnumerable&lt;T&gt;&gt;()</code></li>
+<li><code>Resolve&lt;List&lt;T&gt;&gt;()</code></li>
+</ul>
+<h2 id="support-for-deferred-resolution">Support for deferred resolution</h2>
+<p>Unity container implements strategies to allow deferred resolution of types. It has two types of deferred resolvers:</p>
+<ul>
+<li><code>Func&lt;T&gt;</code> - Creates factory method which instantiates type <strong>T</strong> on demand.</li>
+<li><code>Lazy&lt;T&gt;</code> - Creates <code>Lazy&lt;T&gt;</code> object and passes it to created type.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rexsacrorum/unity-container-docs/blob/github-pages/articles/introduction.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright &copy; 2024 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
