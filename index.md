@@ -1,10 +1,9 @@
-# [Make Unity sustainable](https://opencollective.com/unity-container)
+# Project state
 
-The community support is crucial for the projects to survive and to move forward.
-Unity is all about trust and sharing. [Open Collective](https://opencollective.com/unity-container) lets finances to be managed so everyone can see where money comes from and where it goes. It was selected to provide mechanism for the community to support and finance the project.
+The author of Unity Container and its sole contributor [passed away](https://www.gofundme.com/f/eugene-sadovoi). Therefore, the official project domain with documentation was expired and seized by cybersquatters.
 
-If your project depends on [Unity container](https://github.com/unitycontainer) and you want it to be maintained and developed, please **[support](https://opencollective.com/unity-container)** it. Remember, I can have only one full time job, so without proper financial backing there will be no more releases beyond v5.11
+Since I have to work with a legacy project that uses a Unity container, I decided to restore the documentation. 
 
-**[Become contributor to Unity project](https://opencollective.com/unity-container)**
+I have no intention to maintain the project or to provide any support. I just want to make the documentation available to the community.
 
 [...continue to site](xref:Article.Unity.Introduction)
