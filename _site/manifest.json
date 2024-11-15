@@ -1,4 +1,9 @@
 {
+  "sitemap": {
+    "baseUrl": "https://sacrorum.com/unity-container-docs/",
+    "changefreq": "monthly",
+    "priority": 0.1
+  },
   "source_base_path": "/Users/sacrorum/GitHub/unity-container-docs",
   "xrefmap": "xrefmap.yml",
   "files": [

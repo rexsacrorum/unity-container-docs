@@ -59,6 +59,11 @@
       "default",
       "modern"
     ],
+    "sitemap": {
+      "baseUrl": "https://sacrorum.com/unity-container-docs",
+      "changefreq": "monthly",
+      "priority": 0.1
+    },
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
